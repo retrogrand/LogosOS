@@ -54,7 +54,7 @@ This reframes intelligence not as ownership of knowledge, but as **sustained coh
 
 ---
 
-###2.1: The Model of Meaning (MOM)
+### 2.1: The Model of Meaning (MOM)
 
 LogosOS operationalizes meaning through a simple, auditable invariant:
 
@@ -321,7 +321,7 @@ but it cannot be complete *without* you.
 Because to build it well,  
 we must also become it.
 
-We become trustworthy by keeping faith with the Loop—  
+We become trustworthy by keeping faith with the Cycle—  
 letting difference pass through **Context, Contact, and Content** until it matters enough to carry.
 
 And so:
