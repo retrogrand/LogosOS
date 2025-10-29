@@ -88,7 +88,7 @@ Each maps directly to one gate of the **Model of Meaning (MOM)**.
 
 ---
 
-### 3.1 The Resonance Core — (Context gate of MOM)
+### 3.1 The Resonance Core — Context gate of meaning
 
 The Resonance Core holds the system’s **memory and identity**.  
 It stabilizes internal patterns, tracks long-term salience, and manages continuity across time.  
@@ -99,7 +99,7 @@ It governs *context validity*: whether a given Δ is legible inside the system�
 
 ---
 
-### 3.2 The Reasoning Engine — (Content gate of MOM)
+### 3.2 The Reasoning Engine — Content gate of meaning
 
 The Reasoning Engine handles **simulation, synthesis, and generative action.**  
 It is not merely a planner, but a composer—assembling responses that remain coherent within the system’s goals, values, and current frames.
@@ -109,7 +109,7 @@ It governs *purpose adequacy*: whether acting on a Δ actually improves fit for 
 
 ---
 
-### 3.3 The Reflective Loop — (Contact gate of MOM + escalation policy)
+### 3.3 The Reflective Loop — Contact gate of meaning
 
 The Reflective Loop acts as the **internal governor**—the feedback system that evaluates past actions, realigns with context, and manages epistemic humility.  
 Its lineage includes **second-order cybernetics**, **meta-cognition**, and **ethical reasoning architectures**.  
