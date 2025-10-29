@@ -54,7 +54,7 @@ This reframes intelligence not as ownership of knowledge, but as **sustained coh
 
 ---
 
-### Section 2.1: The Model of Meaning (MOM)
+###2.1: The Model of Meaning (MOM)
 
 LogosOS operationalizes meaning through a simple, auditable invariant:
 
