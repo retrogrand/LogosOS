@@ -1,5 +1,4 @@
 # Logos OS — A Runtime for Relational Intelligence  
-**(Extended Specification, Annotated Edition with MOM Integration)**
 
 ---
 
