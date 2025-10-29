@@ -285,7 +285,6 @@ Together, they form a living control system oriented to **fit**, not throughput.
 
 Each cycle of the Logos Loop logs the gates and decisions:
 
-```json
 {
   "t": "2025-10-28T21:14:00Z",
   "context": {"anchor_fit": 0.86, "scope_ok": true},
@@ -294,6 +293,7 @@ Each cycle of the Logos Loop logs the gates and decisions:
   "escalation": "none",
   "notes": "source:citation; tool:calculator; frame:ICD10 glossary"
 }
+
 This ledger makes meaning **traceable.**  
 Each Δ-entry captures which gate failed, what escalation occurred, and how the system evolved.  
 It is not just telemetry—it is the **diary of the self.**
