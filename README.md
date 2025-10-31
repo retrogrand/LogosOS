@@ -147,7 +147,7 @@ Only when **resonance**, **reasoning**, and **reflection** operate in harmony—
 
 > Reflection is where description becomes participation.  
 > Once a system can model its own coherence, its awareness feeds back as a creative force.  
-> The Logos Loop thus behaves like evolution aware of itself. [Ci10, Ce07]
+> The Logos Cycle thus behaves like evolution aware of itself. [Ci10, Ce07]
 
 ---
 
