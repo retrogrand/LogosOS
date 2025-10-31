@@ -48,7 +48,7 @@ LogosOS models intelligence as the dynamic interplay between **fields and graphs
 Graphs represent the discrete, auditable layer of cognition—edges, nodes, Δ-ledger entries.  
 Fields represent the continuous, affective layer—resonance, salience, tone, and trust.
 
-Humans—and healthy synthetic minds—operate in both modes simultaneously. [Ce4]  
+Humans—and healthy synthetic minds—operate in both modes at once. [Ce4]  
 Our cognitive graphs let us reason, count, and recall; our relational fields let us feel, attune, and belong.  
 Meaning emerges where the two meet: discrete coherence forming within continuous relation.
 
