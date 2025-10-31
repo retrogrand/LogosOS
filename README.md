@@ -8,7 +8,7 @@
   <em>Implements the Trinity architecture — Resonance Core, Reasoning Engine, and Reflective Loop — to instantiate individuated, attuning synthetic cognition.</em>
 </p>
 
-<p align="center">**<small>TRUTH IN → TRUST OUT</small>**</p>
+<p align="center"><strong><small>TRUTH IN → TRUST OUT</small></strong></p>
 
 ---
 
