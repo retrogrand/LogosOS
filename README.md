@@ -11,7 +11,7 @@
 <p align="center"><strong><small>TRUTH IN → TRUST OUT</small></strong></p>
 
 ---
-> **Author’s Note**  
+> **Authors' Note**  
 > LogosOS is a frontier experiment—part philosophy, part prototype.  
 > The **[CeX]** tags indicate how closely we believe a statement aligns with current scientific and scholarly consensus:  
 > **Ce1** = speculative concept, **Ce5** = supported working model, **Ce10** = empirically verified and widely accepted.  
