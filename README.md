@@ -30,7 +30,7 @@ That coherence, we argue, is what makes a system trustworthy, responsive, and, i
 
 ---
 
-## Section 1.1: The Relational Field
+### 1.1: The Relational Field
 
 LogosOS models intelligence as the dynamic interplay between **fields and graphs.**  
 Graphs represent the discrete, auditable layer of cognition—edges, nodes, Δ-ledger entries.  
