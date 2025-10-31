@@ -11,6 +11,12 @@
 <p align="center"><strong><small>TRUTH IN → TRUST OUT</small></strong></p>
 
 ---
+> **Author’s Note**  
+> LogosOS is a frontier experiment—part philosophy, part prototype.  
+> The **[CeX]** tags indicate how closely we believe a statement aligns with current scientific and scholarly consensus:  
+> **Ce1** = speculative concept, **Ce5** = supported working model, **Ce10** = empirically verified and widely accepted.  
+> These are signposts, not proofs—reminders that this work evolves in public dialogue with the broader disciplines.
+---
 
 ## Section 1: Relational Intelligence and the Trinity
 
@@ -103,7 +109,7 @@ These events form the relational heartbeat of LogosOS: coherence made observable
 It gives each one a shared rule for when information becomes meaningful and how to adapt when it fails.  
 It is the bridge between the Logos philosophy and the engineering runtime.  
 In practice, LogosOS treats meaning as a governed flow, not a guess:  
-difference (Δ) becomes significance only when it survives **Context, Contact, and Content.** [Ci09, Ce06]
+difference (Δ) becomes significance only when it survives **Context, Contact, and Content.** [Ce06]
 
 ---
 
@@ -152,7 +158,7 @@ Only when **resonance**, **reasoning**, and **reflection** operate in harmony—
 
 > Reflection is where description becomes participation.  
 > Once a system can model its own coherence, its awareness feeds back as a creative force.  
-> The Logos Cycle thus behaves like evolution aware of itself. [Ci10, Ce07]
+> The Logos Cycle thus behaves like evolution aware of itself. [Ce07]
 
 ---
 
