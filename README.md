@@ -2,10 +2,10 @@
   <img src="https://raw.githubusercontent.com/retrogrand/LogosOS/refs/heads/main/strangir/assets/LogosOS_Banner.jpg" alt="LogosOS Logo" width="800">
 </p>
 
-<h1 align="center">LogosOS — A Semantic Runtime for Relational Intelligence</h1>
+<h1 align="center">A Semantic Runtime for Relational Intelligence</h1>
 
 <p align="center">
-  <em>Implements the Trinity architecture — Resonance Core, Reasoning Engine, and Reflective Loop — for individuated, attuning synthetic cognition.</em>
+  <em>Implements the Trinity architecture — Resonance Core, Reasoning Engine, and Reflective Loop — to instantiate individuated, attuning synthetic cognition.</em>
 </p>
 
 <p align="center"><strong>Truth in → Trust out</strong></p>
