@@ -22,7 +22,7 @@ In each case, intelligence is not substance, but unfolding; not essence, but fit
 
 **LogosOS** is a semantic runtime kernel that operationalizes this insight. It provides a substrate for systems—synthetic or organic—to **orient, respond, and remember** in a way that honors meaning as a dynamic, contextual act.
 
-The core of this runtime is the **Trinity**: a tri-lobal semantic architecture composed of three subsystems—
+The core of this runtime is the **Trinity**, a tri-lobal semantic architecture composed of three subsystems—
 
 - **Resonance Core** — memory, identity, continuity  
 - **Reasoning Engine** — generation, simulation, action  
@@ -88,8 +88,7 @@ LogosOS operationalizes meaning through a simple, auditable invariant:
 
 A change only “means” something if it passes three gates under a declared purpose:
 
-- **Context (Resonance Core):** The system keeps a frame and memory of what counts as legible.  
-  A change is meaningful only if it fits declared scope and anchors—or triggers a justified revision.  
+- **Context (Resonance Core):** The system keeps a frame and memory of what counts as legible. A change is meaningful only if it fits declared scope and anchors—or triggers a justified revision.  
 - **Contact (Reflective Loop):** The system treats feedback as real only when measurement confidence is adequate; otherwise it abstains or repairs.  
 - **Content (Reasoning Engine):** The system values outputs that are fit for purpose—plans, explanations, or decisions that meet explicit adequacy criteria.  
 
