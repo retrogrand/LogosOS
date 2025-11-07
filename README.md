@@ -21,7 +21,7 @@ LogosOS is a working synthesis—part engineering spec, part philosophy. The `[C
 
 Intelligence isn’t a substance you store; it’s a fit you enact in relation. LogosOS makes that fit **practical and measurable**.
 
-Inside each agent, LogosOS runs an internal **truth kernel** (the **Trinity Kernel**). Outside, it presents a trust shell (the **Crux Shell**) via the **Relational Prism**.  
+Inside each agent, LogosOS runs an internal *truth kernel* (the **Trinity Kernel**). Outside, it presents an *external trust shell* (the **Crux Shell**).  
 **Kernel** keeps its story straight; **Shell** makes that story usable, auditable, and collaborative.
 
 - **Trinity Kernel** (internal “truth”, governed by **Contrast**)  
