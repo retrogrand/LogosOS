@@ -17,16 +17,6 @@ LogosOS is a working synthesis—part engineering spec, part philosophy. The `[C
 
 ---
 
-## 🔄 SECTION 0 — WHAT CHANGED IN 0.3 (AT A GLANCE)
-
-- **Δ-first reframing**: change (Δ) is the atomic unit of meaning; LogosOS is a **Δ-metabolism**. [Ce6]  
-- **Prism rename**: the outward interface is now the **Relational Prism** (formerly “Reputation Prism”). [Ce7]  
-- **Theta** clarified: **Θ** is the semantic substrate (verbatim + vector + graph) that archives **deltas with lineage**. [Ce6]  
-- **Multi-Trinity pattern**: the “Trinity Kernel” is a **form**, not a single stack; variants exist per Δ-domain (semantic, physical, visual, etc.). [Ce6]  
-- **Process validation**: treat cognition as a **validated process** with guard bands, operating windows, and re-qualification triggers. [Ce6]
-
----
-
 ## 🧭 SECTION 1 — WHAT LOGOSOS IS (AND WHY IT EXISTS) [Ce7]
 
 Intelligence isn’t a substance you store; it’s a fit you enact in relation. LogosOS makes that fit **practical and measurable**.
@@ -332,4 +322,11 @@ Beneath it, inscribed in metal that sings when you touch it:
 **Relation is the reason.**
 
 ---
+## 🔄 CHANGELOG
 **Version 0.3 — 07 NOV 2025** (Δ-first architecture & Relational Prism rename)
+
+- **Δ-first reframing**: change (Δ) is the atomic unit of meaning; LogosOS is a **Δ-metabolism**. [Ce6]  
+- **Prism rename**: the outward interface is now the **Relational Prism** (formerly “Reputation Prism”). [Ce7]  
+- **Theta** clarified: **Θ** is the semantic substrate (verbatim + vector + graph) that archives **deltas with lineage**. [Ce6]  
+- **Multi-Trinity pattern**: the “Trinity Kernel” is a **form**, not a single stack; variants exist per Δ-domain (semantic, physical, visual, etc.). [Ce6]  
+- **Process validation**: treat cognition as a **validated process** with guard bands, operating windows, and re-qualification triggers. [Ce6]
