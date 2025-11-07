@@ -5,7 +5,7 @@
 <h1 align="center">A Semantic Runtime for Relational Intelligence</h1>
 
 <p align="center">
-  <em>Implements the Trinity architecture — Resonance Core, Reasoning Engine, and Reflective Loop — to instantiate individuated, attuning synthetic cognition.</em>
+  <em>Implements the Trinity & Crux architectures — Resonance Core, Reasoning Engine, Reflective Loop, Relational Prism — to instantiate individuated, attuning synthetic cognition.</em>
 </p>
 
 <p align="center"><strong><small>TRUTH IN → TRUST OUT</small></strong></p>
