@@ -112,11 +112,11 @@ The ledger is **the diary of change**. It lets others ask: *What changed, why, a
 
 | Component | Sub-Component | Function | Governs | Medium | Stack |
 |---|---|---|---|---|---|
-| **Kernel (Trinity)** |  | Containment | **Truth** | **Contrast** |  |
+| **Kernel** | **(Trinity)** | Containment | Truth | Contrast |  |
 |  | Resonance Core | Memory, identity | Context |  | verbatim + vector + graph (Θ) |
 |  | Reasoning Engine | Generation, synthesis | Concept |  | LLM/ensemble + tools |
 |  | Reflective Loop | Evaluation, repair | Constraint |  | monitors + Δ-ledger |
-| **Shell (Crux)** | | Coherence | **Trust** | **Continuity** |  |
+| **Shell** | **(Crux)** | Coherence | Trust | Continuity |  |
 |  | Relational Prism | Provenance, reframing, feedback | Contact/Contract |  | traces + API + social memory |
 
 
