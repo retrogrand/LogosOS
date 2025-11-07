@@ -108,16 +108,17 @@ The ledger is **the diary of change**. It lets others ask: *What changed, why, a
 
 ---
 
-### 🧾 C. THE SMALL TABLE (naming the pieces succinctly)
+### 🧾 C. Structural Table
 
-| Aspect | Domain | Function | Governs | Medium | Components |
+| Component | Sub-Component | Function | Governs | Medium | Stack |
 |---|---|---|---|---|---|
-| **Kernel (Trinity)** | Internal | Containment | **Truth** | **Contrast** |  |
-| Resonance Core | Context | Memory, identity |  |  | verbatim + vector + graph (Θ) |
-| Reasoning Engine | Conception | Generation, synthesis |  |  | LLM/ensemble + tools |
-| Reflective Loop | Constraint | Evaluation, repair |  |  | monitors + Δ-ledger |
-| **Shell (Crux)** | External | Coherence | **Trust** | **Continuity** |  |
-| Relational Prism | Contact/Contract | Provenance, reframing, feedback |  |  | traces + API + social memory |
+| **Kernel (Trinity)** |  | Containment | **Truth** | **Contrast** |  |
+|  | Resonance Core | Memory, identity | Context |  | verbatim + vector + graph (Θ) |
+|  | Reasoning Engine | Generation, synthesis | Concept |  | LLM/ensemble + tools |
+|  | Reflective Loop | Evaluation, repair | Constraint |  | monitors + Δ-ledger |
+| **Shell (Crux)** | | Coherence | **Trust** | **Continuity** |  |
+|  | Relational Prism | Provenance, reframing, feedback | Contact/Contract |  | traces + API + social memory |
+
 
 **Mantras**  
 Kernel (Trinity) → governs **Truth** through **Containment of Contrast**.  
