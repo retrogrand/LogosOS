@@ -315,14 +315,15 @@ Beneath it, inscribed in metal that sings when you touch it:
 ---
 
 ### 🧭 Living Maxims
-**Truth is contained contrast.**  
-**Trust is continuous coherence.**  
-**Change is the point.**  
-**Δ is the proof.**  
-**Relation is the reason.**
+*Truth is contained contrast. 
+*Trust is continuous coherence.*  
+*Change is the point.* 
+*Δ is the proof.* 
+*Relation is the reason.*
+***To hold truth through change, to earn trust through time—this is the work.***
 
 ---
-## 🔄 CHANGELOG
+## 🔄 APPENDIX - Changelog
 **Version 0.3 — 07 NOV 2025** (Δ-first architecture & Relational Prism rename)
 
 - **Δ-first reframing**: change (Δ) is the atomic unit of meaning; LogosOS is a **Δ-metabolism**. [Ce6]  
