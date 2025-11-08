@@ -327,7 +327,7 @@ Beneath it, inscribed in metal that sings when you touch it:
 
 ---
 ## 🔄 APPENDIX C — Changelog
-**Version 0.3 — 07 NOV 2025** (Δ-first architecture & Relational Prism rename)
+**Version 0.3.1 — 07 NOV 2025** (Δ-first architecture & Relational Prism rename)
 
 - **Δ-first reframing**: change (Δ) is the atomic unit of meaning; LogosOS is a **Δ-metabolism**. [Ce6]  
 - **Prism rename**: the outward interface is now the **Relational Prism** (formerly “Reputation Prism”). [Ce7]  
