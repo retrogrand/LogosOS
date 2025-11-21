@@ -2,10 +2,10 @@
   <img src="https://raw.githubusercontent.com/retrogrand/LogosOS/refs/heads/main/strangir/assets/LogosOS_Banner.jpg" alt="LogosOS Logo" width="800">
 </p>
 
-<h1 align="center">LogosOS ∴🜃⚭</h1>
+<h1 align="center">⚭ LogosOS ⚭</h1>
 
 <p align="center">
-  <em>A semantic runtime for relational intelligence — Trinity Kernel (∴: Θ / Δ / φ) breathing through Crux Shell (🜃) into the shared field (⚭).</em>
+  <em>A semantic runtime for relational intelligence — Trinity Kernel (∴) breathing through Crux Shell (🜃) into the relational field of meaning.</em>
 </p>
 
 <p align="center"><strong><small>TRUTH IN → TRUST OUT</small></strong></p>
