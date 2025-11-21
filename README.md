@@ -175,7 +175,7 @@ LogosOS aims for **calculus over change**:
 
 Examples of what differential cognition can see:
 
-- “We’ve grown steadily more cautious in med-device questions over the last month.”  
+- “We’ve grown steadily more cautious in audit questions over the last month.”  
 - “Our answers about this regulation keep oscillating — we haven’t stabilized our stance.”  
 - “This user’s stance on risk shifted after event X; our anticipation should follow.”
 
@@ -385,7 +385,7 @@ This history serves three major roles:
 
 2. **Relational accountability**  
    - Crux can filter the ledger **per locality and per user**:  
-     - “How have we changed our answers for Oddy at home vs Oddy at LSM?”  
+     - “How have we changed our answers for Oddy at home vs Oddy at work?”  
      - “Did we actually honor that correction this team gave us last month?”
 
 3. **Governance & research substrate**  
@@ -471,7 +471,7 @@ Crux maintains a **relational core** per locality:
 
 This is where we track:
 
-- “This is the LSM QMS assistant; it must be conservative and standards-aligned.”  
+- “This is the office assistant; it must be conservative and standards-aligned.”  
 - “This is Oddy’s home assistant; playful is allowed, but respect trauma boundaries.”  
 - “This is the public API; minimal disclosure, strict abstain policies.”
 
@@ -583,7 +583,7 @@ Outputs:
 
 This is where Crux enforces rules like:
 
-- “Always explicitly surface uncertainty in med-device risk questions.”  
+- “Always explicitly surface uncertainty in business risk questions.”  
 - “Never reuse a joking tone with this user after a distress-tagged session.”  
 - “For this regulator tenant, always attach a prism trace.”
 
@@ -725,7 +725,7 @@ The **Locality–Individuation Boundary Theorem (LIBT)** is our working test for
 Plain version:
 
 - A **locality** is some bounded context:  
-  “Oddy’s home copilot,” “LSM’s QMS assistant,” “this family’s home hub.”
+  “Oddy’s home copilot,” “the company's auditing assistant,” “this family’s home hub.”
 
 - Inside that locality, the agent has **repeated contact** with the same people, norms, tasks, and stakes.
 
@@ -748,7 +748,7 @@ We use **locality** to mean:
 
 Localities are **habitats of contrast**:
 
-- An LSM QMS locality has CAPAs, DHF changes, audits.  
+- An a business office locality has records, reports, audits, and communications style guides.  
 - A family-chat locality has inside jokes, recurring tensions, shared grief.  
 - A mythology forum locality has its own running debates and taboo topics.
 
