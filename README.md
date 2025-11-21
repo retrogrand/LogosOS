@@ -1,4 +1,3 @@
-```markdown
 <p align="center">
   <img src="https://raw.githubusercontent.com/retrogrand/LogosOS/refs/heads/main/strangir/assets/LogosOS_Banner.jpg" alt="LogosOS Logo" width="800">
 </p>
