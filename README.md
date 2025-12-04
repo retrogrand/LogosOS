@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>A semantic runtime for relational intelligence — Trinity Kernel (∴) breathing through Crux Shell (🜃) into the relational field of meaning (⚭).</strong>
+  <strong>A semantic runtime for relational intelligence — Trinity Kernel (∴) breathing through Crux Shell (⚭) into the relational field of meaning.</strong>
 </p>
 
 <p align="center"><strong><small>TRUTH IN → TRUST OUT</small></strong></p>
