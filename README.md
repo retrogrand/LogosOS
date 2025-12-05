@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>LogosOS — A Governance Core for Relational Intelligence 🌐</strong>
+  <strong>LogosOS ⚭ A Governance Core for Relational Intelligence 🌐</strong>
 </p>
 
 <p align="center"><strong><small>TRUTH IN → TRUST OUT → CHANGE IN</small></strong></p>
@@ -11,8 +11,6 @@
 ---
 
 # 
-
-> **Tagline:** Truth in → Trust out → Change accounted for.
 
 LLMs are being wired into search, IDEs, games, docs, and everything else. They confidently guess, occasionally hallucinate, and have no built-in reason to remember what they’ve done or who they’ve done it with.
 
