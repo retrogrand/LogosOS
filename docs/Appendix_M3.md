@@ -3,7 +3,7 @@
 > The README is the contract and plumbing.  
 > This appendix is the junk drawer and lore shelf.
 
-LogosOS v1.0 is written as a **governance core** for language agents:
+LogosOS v1.0 is written as a **governance runtime** for language agents:
 Trinity Kernel (Θ / Δ / φ), Crux Shell (⚭), MeaningFS, Δ-ledger, ICARUS, RPL hooks.
 
 Underneath that, a second layer evolved:
@@ -342,7 +342,7 @@ Goal: not zero change, but **digestible, inspectable change**. [Ci09, Ce07]
 
 Modern LLM agents enact hyperstitions all the time (values, ideologies, memes).
 
-LogosOS’s governance core acts as a **QA rig** for those stories:
+LogosOS’s governance runtime acts as a **QA rig** for those stories:
 
 - Which ones is this agent enacting?
 - How did they get encoded as anchors or policies?
