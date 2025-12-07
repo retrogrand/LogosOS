@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>LogosOS ⚭ A Governance Core for Relational Intelligence 🌐</strong>
+  <strong>LogosOS ⚭ A Governance Runtime for Relational Intelligence 🌐</strong>
 </p>
 
 <p align="center"><strong><small>TRUTH IN → TRUST OUT → CHANGE IN</small></strong></p>
@@ -55,7 +55,7 @@ It’s a **trust-layer for language models**.
 
 **Short definition**
 
-> **LogosOS is a semantic governance layer that wraps LLMs and tools and turns them into named, auditable agents for specific contexts.**
+> **LogosOS is a semantic governance runtime that wraps LLMs and tools and turns them into named, auditable agents for specific contexts.**
 
 It treats **intelligence as relational**:
 
@@ -130,7 +130,7 @@ The **Trinity Kernel** is what you’d see if you froze time and just watched th
 
 It’s split into three roles:
 
-- **Θ — Resonance Vault (memory & anchors)**  
+- **Θ — Resonance Core (memory & anchors)**  
   - Holds structured memory:
     - verbatim logs  
     - semantic vectors  
