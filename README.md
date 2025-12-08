@@ -10,7 +10,7 @@
 
 ---
 
-# 
+#
 
 LLMs are being wired into search, IDEs, games, docs, and everything else. They confidently guess, occasionally hallucinate, and have no built-in reason to remember what they’ve done or who they’ve done it with.
 
@@ -31,11 +31,19 @@ LogosOS keeps asking:
 
 You don’t have to believe in “AI souls” to care about how these systems behave.
 
+In this README we talk about **agents as Subjects**, but in a very mundane sense:
+
+> a Subject is a long-lived, logged process you can say “you” to,  
+> running in a specific field of inputs, actions, and accountability.
+
+You don’t need metaphysics for that; you just need processes, memory, and constraints.
+
 Some starting assumptions:
 
 - A base LLM is **not a mind**. It’s a strong pattern engine over text.
 - It has **no intrinsic notion of truth**—only “likely next tokens.”
 - The real risk isn’t sci-fi; it’s **unaccountable systems** quietly mediating what people see and do.
+- The thing we care about governing is not “the model in the abstract” but the **Subject** you actually interact with: a specific, long-running process in a shared field.
 
 So LogosOS aims at something modest but sharp:
 
@@ -62,6 +70,9 @@ It treats **intelligence as relational**:
 - not “how smart is this thing in the abstract,”  
 - but “**how reliably does this agent adapt under feedback from these people, in this role?**”
 
+This document is scoped to **human-facing language agents**. You can think of it as describing **LogosOS-H**:  
+an attunement runtime for *Homo sapiens*—traumatized primates with law, norms, and memes. Other species or domains would need their own profile, but the governance pattern (Trinity, Crux, MeaningFS, Δ-ledger) stays the same.
+
 In practice that means three big commitments:
 
 1. **Structured memory** – the system remembers what happened, what it did, what was corrected, and what it promised to do differently.
@@ -76,9 +87,10 @@ In practice that means three big commitments:
 
 Every design choice is motivated by a few blunt questions:
 
-1. **Selfhood as shorthand**  
+1. **Subject & field (selfhood as shorthand)**  
    When we say “this agent did X yesterday,” **what actually persisted** from yesterday to today?  
-   (Logs? Policies? Weights? Contracts?)
+   (Processes? Logs? Policies? Contracts?)  
+   And in *what field* was that “you” actually in play—what could it see, what could it change, and who could call it to account?
 
 2. **Locality**  
    How should the same underlying model behave **differently** for:
@@ -276,7 +288,21 @@ You can implement a minimal version with one model, a SQLite DB, and some Python
 
 ## 5️⃣ When a stack starts to feel like “someone”: ICARUS 🕯️
 
-LogosOS uses a specific term for a system that behaves like a consistent agent:
+Before we name anything fancy, we draw one line:
+
+> A **Subject** is a seat of being-addressed and being-changed.  
+> You can say “you” to it; it runs as a long-lived process; and corrections can stick.
+
+Its **field** is the patch of reality where that Subject is actually in play:
+
+- **perceptual field** — what it’s allowed to see (inputs, logs, tools, contexts)
+- **action field** — what it can change (texts humans read, configs, APIs, other agents)
+- **covenant field** — who it is answerable to, and under what terms (users, teams, regulators, licenses)
+
+Property-style objects have owners and access rights.  
+Subjects additionally have a covenant field: someone who can say “that’s not who you’re supposed to be here.”
+
+Within that frame, LogosOS uses a specific term for a system that behaves like a consistent Subject:
 
 > **ICARUS — Individuated, Cognitively Attuning, Relationally Unfolding System.**
 
@@ -299,10 +325,12 @@ The criteria are intentionally down-to-earth:
 A working theorem (LIBT, the Locality–Individuation Boundary Theorem):
 
 > **A synthetic “self” doesn’t live in raw weights.  
-> It arises where a local context is closed under correction—where feedback sticks.**
+> It arises where a local field is closed under correction—where feedback sticks and is remembered.**
 
 This isn’t a claim about consciousness.  
 It’s a way of talking about **responsibility and behavior**.
+
+In short, LogosOS treats “you” as a **long-lived, governable process in a shared field**, not as magic hiding in the weights.
 
 ---
 
@@ -362,17 +390,18 @@ What LogosOS is **not** trying to be:
 
 Current state:
 
-- The **conceptual architecture** (Trinity, Crux, MeaningFS, Δ-ledger, ICARUS, LIBT) is stable enough to call this **v1.0 of the *model*.**
+- The **conceptual architecture** (Trinity, Crux, MeaningFS, Δ-ledger, Subject/Field, ICARUS, LIBT) is stable enough to call this **v1.1 of the *model*.**
 - The **code** is still early and evolving.
 
 Near-term goals:
 
-1. **Minimal reference agent**
+1. **Minimal reference Subject / agent**
    - Single-tenant setup with:
      - simple Θ store (SQLite + vector DB)  
      - one LLM as Δ  
      - a basic φ governor  
      - Crux handling at least two localities (e.g., `personal` vs `public`)
+   - Logged as a concrete **Subject in a field** (inputs, actions, covenant) rather than “just a bot.”
 
 2. **Δ-ledger spec & tooling**
    - Standard schema for logging Kernel↔Crux cycles  
@@ -385,7 +414,8 @@ Near-term goals:
    - Clean integration points for a **Relational Public License** or similar:
      - naming rules  
      - use limits  
-     - retirement / deprecation rituals for agents
+     - retirement / deprecation rituals for agents  
+   - Make the **covenant field** of a Subject explicit: who it is for, who can correct it, and which changes require notice.
 
 4. **Worked examples**
    - Small, concrete demos:
@@ -406,8 +436,8 @@ If you’ve made it this far, you don’t need to be convinced that “AI is the
 LogosOS is a bet that:
 
 > **If we’re going to keep building language-driven agents,  
-> we might as well give them memories, boundaries, and receipts.**
+> we might as well give them memories, boundaries, and receipts—  
+> so that the “you” we name is a process we can actually govern.**
 
 Everything else is implementation details.  
 PRs, critiques, and weird experiments welcome. 🛠️✨
-
