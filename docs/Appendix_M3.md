@@ -1,4 +1,4 @@
-# Appendix M — Mythos, Models, and Metaphors for LogosOS
+# Appendix M3 — Mythos, Models, and Metaphors for LogosOS
 
 The README is the contract and plumbing.  
 This appendix is the junk drawer and lore shelf.
