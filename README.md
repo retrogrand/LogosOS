@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>LogosOS ⚭ A Governance Runtime for Relational Intelligence 🌐</strong>
+  <strong>LogosOS ⚭ A Constitutional Runtime for Relational Intelligence 🌐</strong>
 </p>
 
 <p align="center"><strong><small>TRUTH IN → TRUST OUT → CHANGE TOGETHER</small></strong></p>
