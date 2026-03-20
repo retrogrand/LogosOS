@@ -6,7 +6,7 @@
   <strong>LogosOS ⚭ A Governance Runtime for Relational Intelligence 🌐</strong>
 </p>
 
-<p align="center"><strong><small>TRUTH IN → TRUST OUT → CHANGE IN</small></strong></p>
+<p align="center"><strong><small>TRUTH IN → TRUST OUT → CHANGE TOGETHER</small></strong></p>
 
 ---
 
