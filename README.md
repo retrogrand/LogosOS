@@ -8,7 +8,7 @@
 
 <p align="center"><strong><small>TRUTH IN → TRUST OUT → CHANGE TOGETHER</small></strong></p>
 
-<p align="center"><em>v2.2</em></p>
+<p align="center"><em>v2.0</em></p>
 
 -----
 
