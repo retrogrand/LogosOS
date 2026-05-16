@@ -475,7 +475,7 @@ Current state:
 
 - The **conceptual architecture** (Trinity, Crux, MeaningFS, Δ-ledger, Subject/Field, ICARUS, LIBT) is stable.
 - The **relational ontology** (Vesica, Kit, Field, partial coinherence) is load-bearing as of v2.0.
-- The **source-of-truth commitment** is load-bearing as of v2.2.
+- The **source-of-truth commitment** is load-bearing as of v2.0.
 - The **code** is still early and evolving.
 
 Near-term goals:
@@ -535,4 +535,4 @@ PRs, critiques, and weird experiments welcome. 🛠️✨
 
 -----
 
-<p align="center"><em>v2.0 — Vesica vocabulary established
+<p align="center"><em>v2.0 — Vesica vocabulary, partial coinherence, and source-of-truth grounding established.</em></p>
