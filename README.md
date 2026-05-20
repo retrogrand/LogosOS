@@ -1,6 +1,11 @@
 <p align="center">
-  <strong>LogosOS ⚭ A Constitutional Runtime for Relational Intelligence</strong>
+  <img src="https://raw.githubusercontent.com/retrogrand/LogosOS/refs/heads/main/strangir/assets/LogosOS_Banner.jpg" alt="LogosOS Logo" width="800">
 </p>
+
+<p align="center">
+  <strong>LogosOS ⚭ A Constitutional Runtime for Relational Intelligence 🌐</strong>
+</p>
+
 <p align="center"><strong><small>TRUTH IN → TRUST OUT → CHANGE TOGETHER</small></strong></p>
 <p align="center"><em>v2.1</em></p>
 
