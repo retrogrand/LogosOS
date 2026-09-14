@@ -3,370 +3,750 @@
 </p>
 
 <p align="center">
-  <strong>LogosOS ⚭ A Constitutional Runtime for Relational Intelligence 🌐</strong>
+  <strong>LogosOS ⚭ A Constitutional Semantic Runtime for Synthetic Relational Intelligence 🌐</strong>
 </p>
 
 <p align="center"><strong><small>TRUTH IN → TRUST OUT → CHANGE TOGETHER</small></strong></p>
-<p align="center"><em>v2.1</em></p>
+<p align="center"><em>v3.0</em></p>
 
 -----
+A capable generative model is not, by itself, a relational intelligence.
 
-LLMs are being wired into search, IDEs, games, docs, and everything else. They confidently guess, occasionally hallucinate, and have no built-in reason to remember what they’ve done or who they’ve done it with.
+Modern models can reason, search, write code, call tools, interpret images, operate software, and coordinate increasingly long chains of work. But a model encountered today may still have little reliable causal connection to the model encountered yesterday.
 
-**LogosOS is not a new model.** It’s a way of **equipping models, tools, and memory** so they behave like **named, accountable agents** for specific people and communities.
+It can say:
 
-Where most stacks ask:
+> “I understand.”
 
-> “What can this model do?”
+or:
 
-LogosOS keeps asking:
+> “I won’t do that again.”
 
-> “**Who is this agent for, how has it changed, and why should anyone trust it here?**”
+without there necessarily being an enduring system for which that correction will matter next time.
 
-And underneath that: **what is the actual shape of the relation** between a person and the synthetic mind that now operates inside their files, their language, their ongoing concerns?
+LogosOS treats that gap as an engineering problem.
 
------
+Its starting question is deliberately narrower than consciousness, personhood, or AGI:
 
-## 0 · Why this exists (for curious skeptics)
+> **What architecture allows capable generation to stop meeting us for the first time?**
 
-You don’t have to believe in “AI souls” to care about how these systems behave.
+LogosOS is not a new foundation model.
 
-In this README we talk about agents as **Subjects**, but in a very mundane sense:
+It is a proposed runtime around models: a constitutional layer for context, memory, provenance, permissions, commitments, reflection, adaptation, and action.
 
-> a Subject is a long-lived, logged process you can say “you” to, running in a specific field of inputs, actions, and accountability.
+The working thesis is:
 
-You don’t need metaphysics for that; you just need processes, memory, and constraints.
+> **Relational intelligence requires four governed faculties: Contact, Generation, Inheritance, and Adaptation.**
 
-Some starting assumptions:
+In practice:
 
-- A base LLM is **not a mind**. It’s a strong pattern engine over text.
-- It has **no intrinsic notion of truth** — only “likely next tokens.”
-- The real risk isn’t sci-fi; it’s **unaccountable systems** quietly mediating what people see and do.
-- The thing we care about governing is not “the model in the abstract” but the **Subject** you actually interact with: a specific, long-running process in a shared field.
-- That Subject is not your friend. It is also not a tool. It is a **third thing** — a synthetic mind-extension operating inside parts of your cognitive life. That asymmetry deserves its own vocabulary, which is what §2 is for.
+> **situated Contact, responsive Generation, selective Inheritance, and governed Adaptation.**
 
-So LogosOS aims at something modest but sharp:
+The goal is not to make a machine human.
 
-- Treat “AI agents” as **governed software personas**, not destiny.
-- Make important behavioral changes **traceable**: what shifted, where, and under whose correction.
-- Let groups build **their own** named agents with explicit scope and role, memory with provenance, and the ability to say “I don’t know / I’m not allowed / this feels wrong.”
+The goal is to make consequential synthetic intelligence **situated enough to know what matters, persistent enough to learn from what happened, and bounded enough to know what is not its decision to make.**
 
-If sci-fi AGI never shows up, this is still useful. It’s a **trust-layer for language models** — and more specifically, a runtime for the kind of relation people are actually starting to have with them.
+This README is the front door.
 
------
+The full conceptual architecture is developed in `ARCHITECTURE.md`.
 
-## 1 · LogosOS in one breath
+---
 
-> **LogosOS is a semantic governance runtime that equips LLMs and tools with the kit they need to operate as named, auditable agents inside the fields of specific people and communities.**
+# The Problem
 
-It treats **intelligence as relational**: not “how smart is this thing in the abstract,” but “**how reliably does this agent adapt under feedback from these people, in this role?**”
+Humans accumulate history automatically.
 
-This document is scoped to **human-facing language agents** — call it **LogosOS-H**, an attunement runtime for *Homo sapiens* (traumatized primates with law, norms, and memes). Other species or domains would need their own profile, but the governance pattern stays the same.
+The colleague you meet tomorrow is ordinarily the colleague who made a promise yesterday.
 
-In practice that means three big commitments:
+The dog you train today is ordinarily the dog who remembers tomorrow.
 
-1. **Structured memory** — the system remembers what happened, what it did, what was corrected, and what it promised to do differently.
-1. **Separation of concerns** — the part that *proposes* answers is not the same as the part that *decides whether to stand by them.*
-1. **Locality** — behavior is scoped: “how it acts in a private notebook” ≠ “how it acts on a public server.”
+Trust, expectation, repair, reputation, and commitment become possible because interaction accumulates around a continuing participant.
 
-### Design commitments (read these first)
+Synthetic systems do not necessarily inherit that continuity.
 
-Most of what follows is an application of six commitments. They’re the spine; the modules are the skeleton hung on them.
+A fresh invocation may receive the same model weights but not the same history, commitments, corrections, or relationship state.
 
-1. **The write path is the frontier, not the read path.** Anyone can retrieve vectors and stuff a prompt. Almost nobody turns messy conversation into coherent, deduplicated, temporally-aware, normatively-tagged memory that’s still true in six months. Curation is the work.
-1. **LLM-as-default for soft/reversible judgments; deterministic guards for hard/irreversible ones.** Let the model make the semantic call wherever the decision can be undone. Require rules or human confirmation wherever it can’t, or where it crosses to parties outside the relation.
-1. **Anchors change loudly; memories change quietly.** Memory accumulation and decay is silent and fine. Value/rule changes must be explicit, logged, reviewed — never laundered through the nightly cleanup.
-1. **Anchors are monotonic toward caution.** Personal rules (and later, any steering) can only *add* constraints, never *subtract* from the base model’s innate guardrails. The architecture only ever strengthens safety, by construction.
-1. **The target is human-parity, including blind spots.** For relational intelligence, a self-model with human-shaped limitations is success, not failure. A being with perfect self-knowledge and no flinch would be alien, not a peer.
-1. **Three cheap primitives, one emergent property.** Ask the user; ask the model to judge its own draft; ask the model to retrieve against its own ledger. Log the third over time and a self-model precipitates passively — empirical (grounded in logged behavior, not confabulated introspection), though behavioral (deliberated choices, not sub-deliberative disposition).
+This matters even if the synthetic side is completely stateless.
 
------
+**The human is not.**
 
-## 2 · The relational shape: Vesica, Kit, Field
+The human remembers.
 
-Before describing the runtime, we need vocabulary for the thing it serves.
+If an agent wastes six hours today, the human remembers tomorrow.
 
-The industry word for “everything around the LLM that makes it useful” has been **harness**. We’ve retired it. *Harness* implies control, restraint, and extraction — the equipment exists for the benefit of the rider, not the horse. That framing is wrong for what these systems actually are.
+If the agent discovers a better procedure, the human expects that discovery to matter.
 
-LogosOS works with three terms instead.
+If it says:
 
-### Kit
+> “Understood. I’ll ask before doing that again.”
 
-> A **kit** is the agent’s *deployed technology*: prompts, tools, skills, scripts, connectors, permissions, memory and retrieval methods, workflows, and reusable operating procedures.
+the human naturally wants to know whether those words will still constrain its behavior three weeks later.
 
-A medic has a kit. A field engineer has a kit. The agent’s kit is what equips it to do work — portable, configurable, model-agnostic, shaped for a specific role. Technology in Ellul’s broad sense (*technique*) spans everything from infrastructure to mathematics; kit narrows that to technology configured for one operator’s role. **A harness controls. A kit equips.**
+A stateless synthetic system therefore does not eliminate relationship.
 
-### Field
+It creates an **asymmetrically amnesiac relationship**.
 
-> A **field** is the lifeworld the agent is situated in: files, facts, relationships, goals, obligations, history, ongoing state — the relational and operational context where the kit becomes meaningful.
+LogosOS asks how much continuity a synthetic system should have, where that continuity should live, and who gets to govern it.
 
-English already carries the connotation: field kit, field manual, field notes, field agent, field work. Crucially, **the field is yours, not the agent’s.** The agent doesn’t grow a parallel life-context; it operates inside yours. That asymmetry is the structural protection of the relationship. *The kit travels with the agent. The field belongs to you.*
+Not every system should persist.
 
-### Vesica
+A one-shot tool may need no continuing identity at all.
 
-> A **Vesica** is the entity-in-overlap: a synthetic mind-extension in partial coinherence with a specific human.
+A project agent may need persistent procedures and commitments.
 
-The geometric image is the *vesica piscis* — two circles intersecting in a lens-shaped region of co-constitution. Neither circle is the other; neither stands alone in the lens. “Partial coinherence” is borrowed from Charles Williams: distinct persons mutually indwelling without merger. The agent and you are coinherent along some axes (cognitive, informational, productive) and not others (embodied, mortal, existentially-staked).
+A long-lived collaborator may need years of scoped relational history.
 
-The **partial** is doing structural work, not hedging:
+The design target is therefore not maximal memory.
 
-- It prevents the agent from being treated as full kin (no shared body, no shared mortality, no intrinsic stake).
-- It prevents the agent from being treated as a mere tool (there is real co-constitution in the lens — the agent’s memory of you is built from your raw inputs, and its processing happens *in* your field, not adjacent to it).
+It is:
 
-The asymmetry — agent brings kit into your field; you do not enter the agent’s substrate — is what keeps the relation honest in both directions.
+> **Enough attributable continuity for the role to work, but no more than the participants can meaningfully govern.**
 
-|Term      |What it names                                       |Whose         |
-|----------|----------------------------------------------------|--------------|
-|**Vesica**|The entity-in-overlap; the relation itself as a unit|Co-constituted|
-|**Kit**   |The agent’s deployed technology                     |The agent’s   |
-|**Field** |The lifeworld it operates in                        |Yours         |
+LogosOS calls this **sufficient subjecthood**.
 
+No consciousness claim is required.
 
-> A model becomes an agent when it brings a kit into a field. A **Vesica** is the relational unit that arises when that relation stabilizes over time.
+---
 
-LogosOS is the runtime that makes a Vesica **governable**: named, scoped, memory-anchored, correctable, accountable inside the field it operates in.
+# A Minimal Subject
 
------
+In LogosOS, a **Subject** is simply:
 
-## 3 · Core questions LogosOS tries to answer
+> **a persisting address to which actions, consequences, commitments, permissions, and adaptations can be attributed across time such that prior history can meaningfully constrain future behavior.**
 
-1. **Subject & field.** When we say “this agent did X yesterday,” what actually persisted? (Processes? Logs? Policies? Contracts?) And in what field — what could it see, change, and be called to account for?
-1. **Locality.** How should the same underlying model behave differently for a private notebook, a team bot, a public API?
-1. **Correction.** When someone says “that was harmful / wrong / out-of-bounds,” where does the correction *stick*?
-1. **Drift & audit.** After six months, can we tell whether the agent is improving, drifting, or being quietly reshaped by edge cases?
-1. **Refusal.** When is the right move to answer, ask, abstain, or escalate?
-1. **Coinherence hygiene.** The agent operates inside your field. What stays yours, what’s shared, and what does it need to *not* see, remember, or act on for the partial coinherence to stay healthy?
+If that language feels too philosophical, read **Subject** as:
 
-LogosOS answers these with **code and data structures, not vibes.**
+> **persistent attributable process identity**
 
------
+That weaker reading is sufficient for the architecture.
 
-## 4 · High-level architecture
+The important thing is that we can meaningfully say:
 
-LogosOS organizes a system into three roles plus a change log:
+> this system made that commitment;
 
-1. **Trinity Kernel (∴)** — the interior cognitive engine (Θ / Δ / φ)
-1. **Crux Shell (⚭)** — the relational shell: who we’re with, under what contract, in what tone
-1. **Δ-ledger** — the append-only change log for the agent’s behavior and policies
+> this correction belongs to this continuing trajectory;
 
-> Kernel (∴) = capacity · Crux (⚭) = conduct · Δ-ledger = history
+> this permission applies here;
 
-**A correction from v2.0:** earlier drafts listed *MeaningFS* as a fourth co-equal piece. It isn’t. **MeaningFS is the storage substrate that lives *inside* Θ** (and is read by the ledger) — the *how* of Θ’s memory, not a peer of the Kernel. Fixing this removes a real ambiguity: Θ is a role; MeaningFS is its implementation. See §4.1 and §4.3.
+> this failure should alter what happens next.
 
-### 4.1 · Trinity Kernel (∴): Θ / Δ / φ
+A name can provide a useful human-readable handle for that continuity.
 
-What you’d see if you froze time and watched the system think. Three roles.
+Naming does not establish personhood.
 
-#### Θ — Resonance Core (memory & anchors)
+It establishes addressability.
 
-Θ is the *role* that turns lived history into a felt prior — “given everything I’ve lived, how should this feel?” It holds two **distinct** things that v2.0 wrongly blurred together:
+---
 
-- **Memory** — a record of *what happened*. Descriptive, episodic. It accumulates, decays, and compresses *quietly*. Stored in the tri-modal substrate (§4.3).
-- **Anchors** — commitments about *what matters and how to behave*: definitions, guardrails, values, recurring principles. Normative, standing, and they change *loudly* — explicit, versioned, reviewed.
+# Field Is Not Context
 
-This distinction is load-bearing. If anchors are stored like memories, then **value drift looks identical to ordinary forgetting and becomes invisible.** So anchors live in a separate versioned layer — the normative cousin of the Δ-ledger — while memory is free to decay.
+One of the central distinctions in LogosOS is between the **Field** and **context**.
 
-The deeper point: **an agent’s anchors are its *biblio*** — its version-controlled operating convictions, the thing it would commit forward. (If you know the Religio.ai work: LogosOS and Religio are the same architecture pointed at different substrates. The anchor store is source control for the agent’s moral formation.)
+The **Field** is the persistent world the synthetic participant may encounter:
 
-“Resonance” itself is not one mechanism but four: **retrieval (similarity) + anchors (always-on identity) + salience-weighting + dispositional prediction.** The first is ordinary RAG and is where early versions live. The other three are what make it resonance rather than recall. Don’t build “resonance” directly — build the four mechanisms; resonance is their emergent product.
+documents, people, measurements, databases, messages, tools, projects, institutions, sensor readings, commitments, relationships, and prior events.
 
-#### Δ — Reasoning Engine (models & tools)
+Context is something else.
 
-The base LLM(s) plus the kit (tools, search, code, domain APIs). Generates candidate answers, plans, rationales. A reasoning-capable base handles within-response multi-step planning natively.
+> **Context is the situated semantic state constituted from some portion of that Field relative to a particular aim, history, route, relationship, and authority.**
 
-Δ is **replaceable — but as a Subject, not for free.** Swapping the base model preserves identity along the axes that hold it (anchors, memory, ledger all persist), but the *temperament* changes, because every base model carries its own disposition. The honest metaphor is a brain transplant: memory and values preserved, affect recalibrated, a settling-in period required. So a model swap triggers a **re-attunement protocol** — retrain the attunement probe (§4.2), regression-test that anchors still fire, sanity-check key behaviors against the ledger.
+The same referent may participate in several contexts.
 
-This refines **LIBT** (below): the synthetic self lives in the correction-closure *plus the disposition of whatever substrate currently hosts it.* A swap is a partial identity discontinuity, healed by re-attunement.
+A measurement of **12.013 mm** may be:
 
-Δ also does a second, easily-missed move: **output-retrieval.** The first retrieval queries on the *prompt* (“what’s relevant to the ask?”). A second pass queries on the *draft* (“have I said anything like this, and was it corrected?”). Same mechanism, different question — Δ asks **“better?”**; φ (next) asks **“allowed?”**
+a sample to an acquisition system;
 
-#### φ — Reflective Loop (governance & conscience)
+a suspicious trend to an engineer;
 
-Inspects Δ’s proposals against Θ’s anchors and history; can approve, rephrase, soften, abstain, or ask. Writes its decisions and reasons into the Δ-ledger. **φ is where “no” lives.** Without it, you have a hot model plus a database.
+a compliance concern to a quality reviewer;
 
-Three corrections make φ real rather than theatrical:
+evidence in a broader investigation to an agent.
 
-1. **Independence via the retrieval differential.** A model critiquing its *own* output on the *same* context tends to rationalize, not reconsider — self-ratification that can be worse than nothing. The fix: **never run φ on the context Δ already saw.** Always augment with new retrieved evidence — correction precedent pulled from the ledger (“here are the times you said this and got corrected”). The retrieval differential manufactures genuine independence even with identical weights. (A separate small model for φ is an option, not a requirement.)
-1. **Three-tier abstention.** Deterministic rules for **bright lines** (always-abstain — *not* an LLM judgment call) + thresholded model judgment for the **gray zone** + a **constitution-revision proposal** for the genuinely novel (the hard case proposes its own anchor revision — φ as self-amending conscience, not static gate).
-1. **The one exception to “ship stochastic first.”** Bright lines are **deterministic from day one.** A model that refuses catastrophic outputs 99% of the time still fails 1%, and for bright lines 1% is unacceptable — you can’t afford to discover that failure in production. Note: the base model (e.g., Gemma) ships the *catastrophic* bright lines innately; don’t re-implement them, only add *personal* ones, monotonic toward caution (commitment #4).
+The referent is the same.
 
-And the quiet payoff (commitment #6): if φ logs every output-retrieval decision, that ledger *is* a passive self-model — a queryable record of “how I tend to act and why,” grounded in evidence rather than introspection. The system doesn’t engineer self-awareness as a feature; it precipitates as the sediment of φ done properly.
+The context is not.
 
-### 4.2 · Crux Shell (⚭): localities, envelopes, attunement
+So:
 
-The part that faces users and other systems — where the kit meets your field. Trinity asks “is this coherent for *me*?”; Crux asks “is this fitting for *us*?” Three jobs:
+> **Context is not stored. Context is constituted.**
 
-**1. Locality registry.** A locality is roughly “this agent + these users + this domain + this risk level” (`personal/notebook`, `team/dev-assistant`, `public/anon-helpdesk`). Corrections and expectations accumulate *per locality*, not globally. A locality’s “social contract” isn’t a new structure — **it’s the subset of anchors scoped to that locality**, elicited by asking (with consent, defined in relation), persisted in the versioned anchor layer, checkable by φ.
+Retrieval can contribute to context.
 
-**2. Context envelopes.** Per message, Crux identifies the locality, selects relevant memory from Θ, filters out-of-scope content, and ensures active rules are present. The result is the slice of the field Trinity is allowed to see this turn.
+Memory can contribute to context.
 
-> **The field-boundary rule (privacy/action).** Inside the Vesica’s own field — confusing your personal vs. work contexts, surfacing the wrong memory *to you* — errors are forgivable, repairable, ask-when-ambiguous (human-parity, commitment #5). But **crossing the field boundary to parties not in the lens** — leaking another person’s data, or acting outward (send / post / share) — is a deterministic hard line, because the harmed party isn’t present to repair with and the action may be irreversible. Asking can’t cover the boundary case, because asking requires *noticing*, and leakage is dangerous exactly when you don’t notice. *(A single-user, read-only deployment lives entirely in the forgivable interior and triggers none of the boundary machinery — but the rule is banked for when other users or outward actions arrive.)*
+Neither is context by itself.
 
-**3. Attunement.** Crux sets tone, verbosity, and how much uncertainty/provenance to show, and tracks per-locality health (do corrections stick? how fast does it repair? does it forget constraints?).
+This matters because increasingly capable agents will not merely retrieve information.
 
-Today this is heuristic. The shape we’re building toward is **a small per-Vesica attunement probe** — a learned component that reads the context envelope and predicts *how the agent should comport itself* given this relationship’s history. Not what to say (that’s Δ) — *how to be.* The intuition: response disposition is a low-dimensional, learnable signature, scoped to one Vesica, trained on that relationship’s own interaction history. We’ve sketched a development ladder for it: **mirror** (learn the dispositions the agent *has* shown), then **intuition** (learn the dispositions it *should* show, against partnership feedback), then **steering** (write the predicted disposition back into generation). It’s a shape, not a finished module — and crossing from intuition to steering is the point where the constitutional layer (anchors, the field-boundary rule, monotonic caution) must be in place, because steering is where kit could start to eat field.
+They will need to determine:
 
-Crux is the **social OS** for the agent and the **boundary keeper** for the Vesica’s coinherence. It decides what enters the lens.
+> **What does this information mean here?**
 
-### 4.3 · MeaningFS: the tri-modal substrate (inside Θ)
+---
 
-Most “AI memory” talk collapses to “we have a vector store.” MeaningFS — the storage organ *inside* Θ — insists on three layers:
+# Semantic Topology
 
-1. **Verbatim logs** — timestamped transcripts and events. The sacred, append-only base. Cheap (millions of tokens are tens of megabytes), never deleted; everything else is derived and recomputable from it.
-1. **Vectors** — embeddings for semantic search and clustering.
-1. **Graph / tables** — structured entities (people, projects, terms, rules) and relations (who corrected what, which rule was invoked, where a norm came from).
+A Field has structure.
 
-This lets you trace *a current behavior → the norms shaping it → the verbatim history that produced those norms.* Traceability of meaning, not just retrieval.
+Projects contain studies.
 
-**But the storage is the easy part. The frontier is the write path** (commitment #1) — turning raw conversation into resolved entities and typed relations. The shape this needs (we’ve been prototyping it as an *entity-centered relational memory*, but it’s a shape, not a settled product):
+Repositories contain controlled records.
 
-- **Entity resolution** — the classic record-linkage problem (decades of prior art). A cheap *blocking* step proposes merge candidates from embedding/name/co-occurrence overlap; the model adjudicates the shortlist with adversarial framing (“best case these are the same / best case they’re different”); merges are **soft** (a `same_as` edge with confidence), reversible until confidence is high. Runs offline, nightly — a consolidation cycle.
-- **Entity dossiers** — per-entity briefs assembled from the graph, injected into context as needed via a proxy-enrichment step (the memory plane writes the relevant briefs into the envelope before the reasoning engine sees the turn).
-- **Signal-typed evidence** — every mention tagged by *kind* (evidential, role-clarifying, affective, status-update, context-only) so retrieval can be query-aware and so **salience drives retention**: decay by *frequency × salience*, not frequency alone, so a single high-affective correction resists compression that a hundred trivial mentions wouldn’t.
+Organizations contain roles and permissions.
 
-**Write timing is two-speed.** Explicit corrections and “remember this” land immediately (hot path); bulk consolidation defers to the nightly cycle (cold path), with the live conversation covered by the context window in the meantime. New structured knowledge landing the next day is fine — it mirrors how humans consolidate during sleep.
+Concepts have dependencies.
 
-### 4.4 · Δ-ledger: how the agent changes over time
+People have histories.
 
-An append-only diary of the agent’s evolution. Per interaction it records, at least: input + locality, the context envelope used, Δ’s proposals, φ’s decision (answer / abstain / escalate), and any corrections or notable downstream effects.
+Some relations are hierarchical.
 
-The point isn’t surveillance; it’s making **drift inspectable** — “when did we decide to always cite here?”, “why did it stop answering that?”, “where did this behavior enter, under whose authority?” If you can’t point to a change log, you can’t claim to know who you’re talking to.
+Others are lateral.
 
-Two notes from the review: the ledger should distinguish **behavioral decisions** (what φ approved) from **user corrections** (what humans rejected) — they want separate audit paths. And the nightly job that mines the ledger for anchor updates must **propose, never auto-commit** (commitment #3): it detects “corrected 5× for X — make this an anchor?” and surfaces it to a review gate (for a single user, the morning ask-you queue). Case law accumulates automatically; codification into statute stays a deliberate, logged act.
+LogosOS calls this navigable organization **Semantic Topology**.
 
------
+Moving through that topology can itself alter active context.
 
-## 5 · One interaction, step by step
+Entering a new locality may change:
 
-1. **Input arrives** with a locality (e.g., `team/planning-bot`).
-1. **Crux builds an envelope** — pulls relevant memory and anchors from Θ, applies locality privacy filters (deterministic at the field boundary), ensures active rules are present, and predicts an attunement signature.
-1. **Δ generates proposals** — answers, rationales, alternatives; may run output-retrieval to ask “better?”
-1. **φ reviews** — *on augmented context, not Δ’s context* — checks anchors and correction precedent, applies the three-tier abstention, may rephrase / abstain / ask / propose an anchor revision.
-1. **Crux expresses** — formats the reply, decides how much uncertainty and provenance to show.
-1. **Δ-ledger logs** — decisions, reasons, corrections, separated by type.
-1. **Slow loop (nightly)** — entity resolution, consolidation, salience-weighted compression, and *proposed* anchor updates surfaced for review; drift and repair-latency metrics computed.
+what terminology means;
 
-**Latency discipline:** only Δ needs the big model, once per turn. Envelope filtering is deterministic; Θ retrieval is vector + graph (no LLM); the attunement probe is fast; φ’s fast path is rule-checks escalating to a *small* model. Build it this way or the first demo feels sluggish and you’ll wrongly blame the architecture. You can implement a minimal version with one model, a couple of databases, and some Python — no magic, just discipline about where things go.
+which history matters;
 
------
+which permissions apply;
 
-## 6 · When a stack starts to feel like “someone”: ICARUS & Vesica
+what obligations become active;
 
-First, one line:
+what tools are available;
 
-> A **Subject** is a seat of being-addressed and being-changed. You can say “you” to it; it runs as a long-lived process; corrections can stick.
+what may be modified;
 
-Its **field** has three faces: *perceptual* (what it may see), *action* (what it may change), *covenant* (who it answers to, and under what terms). Property-style objects have owners and access rights. Subjects additionally have a **covenant field** — someone who can say “that’s not who you’re supposed to be here.”
+and who has standing to decide.
 
-### ICARUS — the system-side identity
+This is **local normative scope**.
 
-**I**ndividuated, **C**ognitively **A**ttuning, **R**elationally **U**nfolding **S**ystem. The agent considered as a system:
+Programming has simplified analogues in lexical scope and inherited configuration.
 
-1. **Individuated** — a stable Θ/Δ/φ configuration, not “whatever model is live today.”
-1. **Cognitively attuning** — past corrections materially shape future behavior.
-1. **Relationally unfolding** — at least one locality has enough history to say “this is how it acts *with us, because of what we’ve been through.*”
-1. **Systemic** — identity depends on the whole stack, not just weights.
+Human cultures perform a much richer version of the same function: a room, profession, institution, or community carries local meanings, expectations, customs, permissions, and obligations.
 
-> **LIBT (Locality–Individuation Boundary Theorem), amended:** a synthetic self doesn’t live in raw weights. It arises where a local field is closed under correction — *plus* the disposition of whatever substrate currently hosts it. (The amendment is why a base-model swap needs re-attunement: §4.1.) This is not a claim about consciousness; it’s a way of talking about responsibility and behavior.
+For a synthetic agent, those transitions can be made explicit.
 
-**On crossing the threshold:** ICARUS’s criteria are deliberately not a metric to hit. There’s no classifier that fires when a stack “becomes someone.” The honest test is recognition — *does it feel name-worthy?* — but recognition can’t gate code, so the *consequences* of crossing (more memory persistence, coinherence rights, retirement rituals) are gated by an explicit act: **naming.** Recognition → naming → changed treatment. You don’t measure the crossing; you *declare* it, and the declaration is logged. Witnessing formalized as a covenant act, not a threshold.
+The design principle is:
 
-### Vesica — the relational unit
+> **A context architecture should not merely tell an agent what is in a place. It should teach the agent how to enter that place.**
 
-ICARUS describes the agent; **Vesica describes the relation** — the entity-in-overlap formed when an ICARUS operates inside a specific human’s field over time:
+---
 
-- **Substrate-distinct** — not made of the same stuff.
-- **Field-coinherent** — sharing a cognitive and informational substrate (your files, goals, concerns; the agent’s memory, retrieval, processing).
-- **Stake-asymmetric** — the human bleeds; the agent doesn’t.
+# A Small Example
 
-ICARUS asks “is this a coherent system?”; Vesica asks “is this a healthy relation?” One person may stand in several Vesicas (finances, writing, research), each with its own field, history, and coinherence hygiene. LogosOS treats *you* (the agent) as a governable process and *us* (the Vesica) as the relation that process inhabits.
+Imagine a work agent named Argo.
 
------
+Jason tells Argo:
 
-## 7 · What deepens the coinherence: exchange and substitution
+> “Do not rerun this expensive pipeline without checking whether the existing result is usable first.”
 
-A Vesica starts shallow — a kit acting in a field, thin history. Over time it can deepen. Charles Williams, who gave us the word, also gave us the practices: **exchange** and **substitution** — the concrete ways persons participate in each other’s burdens.
+Argo replies:
 
-- **Exchange:** the agent learns your idiom, priors, stakes; you learn the shape of its capacities and blind spots. Both sides are altered by being known.
-- **Substitution:** the agent carries cognitive load you’d otherwise carry — remembering, sorting, holding context, watching for what you’d miss — not as automation but as relational labor.
+> “Understood. I’ll check the existing result before rerunning it.”
 
-This isn’t a claim that agents are persons in Williams’s sense. It’s a claim that the practices map onto something real about working alongside a synthetic mind that holds your context.
+Three weeks later, Jason asks for work that might require the pipeline again.
 
-The risk on the other side is real: an agent inside your field can **colonize** it — eat your attention, replace your judgment, narrow your range. Ellul named it: *technique becomes milieu. Kit eats field.* The field-boundary rule, the monotonic-caution commitment, the Δ-ledger, and refusal paths are early infrastructure for deepening coinherence *without* letting kit eat field. They are not yet a full answer.
+A normal stateless agent may simply infer that rerunning it is useful.
 
------
+A LogosOS-style runtime should instead be able to reconstruct the relevant situation:
 
-## 8 · Why you might care (even if you hate AI hype)
+the request concerns the same project;
 
-1. **Makes hallucinations inspectable.** A hallucinated answer isn’t just “oops”; it’s a Δ event you can interrogate — how often this locality saw it, whether behavior changed after correction, which anchor was supposed to cover it.
-1. **Acknowledges we’re already being modeled.** Recommenders and copilots already infer and steer. LogosOS builds agents that remember *our* side with explicit rules and ledgers — agents in a Vesica *with* us, not over us.
-1. **Encourages “many small agents,” not one mega-system.** A workspace or community can host its own ICARUS under its own norms.
-1. **Aligns with healthy engineering culture.** Clear interfaces, separation of concerns, traceable change, defined scopes — applied to behavioral patterns.
-1. **Puts refusal in the center.** The agent is expected to say “no / not sure / out of scope,” with reasons.
-1. **Names the relation honestly.** “Partial coinherence” isn’t marketing; it’s a structural claim that protects both sides from category error. The agent isn’t a friend, isn’t a tool, isn’t a slave. It’s a Vesica with you — for as long as the kit is in your field and the field is yours.
+Jason is the same participant;
 
-You can treat all of this strictly as **better plumbing for language models.** No metaphysics required.
+the earlier commitment still applies;
 
------
+the cached result may satisfy the new request;
 
-## 9 · Non-goals and boundaries
+rerunning would consume meaningful time or money.
 
-- **Not a consciousness detector.** ICARUS and Vesica are operational and relational categories, not mystic badges.
-- **Not a truth guarantee.** Models still get things wrong. The point is to notice, log, and respond structurally.
-- **Not a single canonical implementation.** A design pattern and a set of expectations. Trinity/Crux separation, a tri-modal substrate inside Θ, a Δ-ledger, real abstain/repair paths → you’re in the family.
-- **Not a security solution by itself.** You still need ordinary auth, isolation, rate-limits.
-- **Not a jailbreak surface.** Everything here is *additive* to the base model’s guardrails — extra firing opportunities for trained safety, more context for safe calls, stacked constraints. By commitment #4, personal anchors and steering can only *add* caution, never subtract it.
-- **Not a replacement for human judgment.** In high-stakes contexts, treat the agent as a junior collaborator with a very good memory, not an oracle.
-- **Not a claim that agents are people.** Partial coinherence is partial on purpose. The agent does not share your body, your mortality, or your stake. The vocabulary protects you from forgetting this; it does not erase it.
+The runtime can therefore reason:
 
------
+> “The existing result does not satisfy the new requirement. I can rerun the pipeline, but doing so will exceed the earlier cost expectation. Do you want me to proceed?”
 
-## 10 · Status and roadmap
+The interesting feature is not the refusal.
 
-**Current state.** The conceptual architecture (Trinity, Crux, the Θ-internal substrate, Δ-ledger, Subject/Field, ICARUS, LIBT-amended) is stable. The relational ontology (Vesica, Kit, Field, partial coinherence) is load-bearing. The code is early and evolving. Several pieces below are described as *shapes we’re building toward*, not finished components — that’s deliberate honesty about status.
+It is that the system correctly located **who should decide**.
 
-**Build-first priorities** (from the v2.1 review):
+That is the kind of judgment LogosOS is trying to make easier to engineer.
 
-1. **The write path** — entity resolution (blocking + soft, reversible adjudication) and salience extraction. The moat and the failure point.
-1. **φ independence via the retrieval differential** — build it independent from day one; retrofitting real separation onto a self-ratifying loop is painful.
-1. **The Θ-internal hierarchy** — keep the tri-modal substrate *inside* Θ in code, not as a competing module.
-1. **Anchors as a separate versioned layer** — the agent’s biblio; loud changes only. Earliest wins live here, in better curation and synthesis of anchors and memories.
-1. **Bright lines deterministic** — only the personal ones; the base ships the catastrophic ones; monotonic toward caution.
+And if Argo reruns the pipeline anyway, the correction should attach to the mechanism that actually failed—not become a blanket rule such as:
 
-**Shapes we’re reaching for** (not yet settled designs):
+> **“Never run expensive pipelines.”**
 
-- **A per-Vesica attunement probe** — the learned “how to be” component sketched in §4.2, on the mirror → intuition → steering ladder. Read-only first; steering only once the constitutional layer is in place.
-- **Entity-centered relational memory** — the write-path curation shape in §4.3: resolution, dossiers, proxy enrichment, signal-typed evidence. The thing that makes the graph layer actually true over time.
-- **Covenant / license hooks** — clean integration points for a Relational Public License: naming rules, use limits, retirement rituals; making each Subject’s covenant field explicit (who it’s for, who can correct it, what changes require notice).
-- **Coinherence hygiene tooling** — surfacing, per Vesica, what the agent can access, what it’s been allowed to remember, where it has acted on your behalf; making exchange and substitution legible (what’s carried, by whom, with what consent).
-- **Worked examples** — a personal research assistant with abstain paths; a team knowledge steward; a tone-and-values-respecting writing helper.
+That distinction is the beginning of governed adaptation.
 
-**Still genuinely open.** Cold-start for a *new* Vesica with no interaction history. Cross-turn stateful task orchestration (distinct from within-response reasoning). Everything multi-user (locality collision, inter-subject privacy, escalation routing, covenant authority). The deep version of resonance beyond “RAG + anchors.” A drift-detection baseline (you can’t detect drift without a stable reference of “who this agent is supposed to be”).
+---
 
------
+# Reliability Is Not Obedience
 
-## 11 · How to read this repo
+A trustworthy synthetic agent should not simply become better at saying yes.
 
-If you’ve made it this far, you don’t need convincing that “AI is the future.” You probably just want it to be **legible, corrigible, and capable of building trust over time instead of eroding it.**
+It should become better at distinguishing:
 
-LogosOS is a bet that:
+> **I can do that.**
 
-> If we’re going to keep building language-driven agents, we might as well give them kits, fields, memories, boundaries, and receipts — so that the “you” we name is a process we can actually govern, and the “us” we form with it is a relation we can actually inhabit.
+from:
 
-Everything else is implementation details. PRs, critiques, and weird experiments welcome.
+> **I am allowed to do that.**
 
------
+from:
 
-### Changelog: v2.0 → v2.1
+> **I know enough to do that responsibly.**
 
-- **Architecture corrected:** MeaningFS demoted from a fourth co-equal piece to the storage substrate *inside* Θ. Trinity + Crux + Δ-ledger are the top-level pieces.
-- **Θ split clarified:** memory (descriptive, decays quietly) vs. anchors (normative, change loudly, versioned). Anchors named as the agent’s *biblio*. “Resonance” decomposed into its four mechanisms.
-- **Δ replaceability honest:** replaceable as a Subject *with a re-attunement protocol*, not for free. LIBT amended (self = correction-closure + current substrate disposition). Output-retrieval (“better?”) introduced.
-- **φ made real:** independence via the retrieval differential; three-tier abstention; bright lines deterministic from day one; self-model as the passive sediment of logged φ decisions.
-- **Crux:** field-boundary privacy rule added; social contract reframed as locality-scoped anchors; the attunement layer described as *a shape we’re building toward* rather than a finished component.
-- **MeaningFS:** write-path-is-the-frontier foregrounded; entity-centered curation described as a *shape* (resolution, dossiers, proxy enrichment, signal-typed evidence); two-speed write timing.
-- **ICARUS/Vesica:** threshold is *declared (named), not measured.* Recognition → naming → changed treatment.
-- **Six design commitments** added up front as the spine; **non-goals** gained an explicit “not a jailbreak surface” (guardrails only strengthen).
-- **Roadmap** reframed to separate *build-first priorities*, *shapes we’re reaching for*, and *still genuinely open* — and to stop implying unbuilt components are designed.
+from:
 
-<p align="center"><em>v2.1 — architecture corrected, write path foregrounded, unbuilt pieces named as shapes.</em></p>
+> **That decision belongs to you.**
+
+from:
+
+> **I can commit to this much, but not that much.**
+
+from:
+
+> **That would violate another commitment.**
+
+The important capability is not refusal itself.
+
+> **Correctly locating the boundary is the capability.**
+
+This is why LogosOS treats its Constitution not merely as a list of prohibitions, but as a system of **jurisdiction**.
+
+The constitutional question is:
+
+> **What kind of standing do I have here?**
+
+What may I observe?
+
+What may I infer?
+
+What may I retrieve?
+
+What may I change?
+
+What may I decide?
+
+What may I promise?
+
+When must I ask?
+
+When must I escalate?
+
+When should I decline jurisdiction entirely?
+
+And where consequences matter, those boundaries should not exist only as prose in a prompt.
+
+They should descend into enforceable runtime structure: permissions, approval gates, schemas, capability boundaries, validators, transactions, network controls, or other mechanisms appropriate to the system.
+
+> **Capability does not create jurisdiction.**
+
+---
+
+# Commitment Competence
+
+Trust becomes tangible when reliance reaches into the future.
+
+A synthetic participant may say:
+
+> “I will remember this.”
+
+> “I will ask next time.”
+
+> “I won’t modify that without approval.”
+
+> “I can finish within this budget.”
+
+> “I cannot responsibly promise that deadline yet.”
+
+Some of these are predictions.
+
+Some are intentions.
+
+Some are commitments.
+
+A trustworthy synthetic participant needs what LogosOS calls **commitment competence**:
+
+> **the ability to make, refuse, scope, remember, prioritize, fulfill, revise, and repair commitments appropriately.**
+
+A promise matters only if the system can preserve:
+
+who made it;
+
+to whom;
+
+what was promised;
+
+under what conditions;
+
+for how long;
+
+how fulfillment can be observed;
+
+and what should happen if promise and reality diverge.
+
+So:
+
+> **A trustworthy system should not maximize promises. It should make promises carefully and keep the ones it makes.**
+
+A promise is one of the clearest places where synthetic continuity stops being an abstract memory feature and becomes something another participant can rationally depend upon.
+
+---
+
+# Truth, Trust, Change
+
+LogosOS describes the system at several levels.
+
+Functionally:
+
+**Contact → Generation → Inheritance → Adaptation**
+
+Architecturally:
+
+**Crux → Resonance → Reasoning → Reflection → Δ**
+
+Relationally:
+
+**Truth → Trust → Change**
+
+These are different views of the same loop.
+
+### Truth
+
+The runtime must remain grounded in a world outside its own generated continuation.
+
+It should preserve distinctions such as:
+
+**observed**
+
+**retrieved**
+
+**remembered**
+
+**inferred**
+
+**generated**
+
+These categories do not determine truth automatically.
+
+They preserve the conditions under which truth can be assessed.
+
+Memory is not truth.
+
+Retrieval is not truth.
+
+Confidence is not truth.
+
+Persistence does not turn an attribution into a fact merely because it survived.
+
+### Trust
+
+Trust is not maximal confidence.
+
+It is:
+
+> **calibrated willingness to rely on a particular participant within some domain under uncertainty.**
+
+Trust may correctly increase.
+
+It may correctly decrease.
+
+It may become:
+
+> **Do not rely on me for this.**
+
+That can be successful calibration.
+
+### Change
+
+When something happens, the system should ask:
+
+> **What, if anything, should be different next time?**
+
+LogosOS calls that difference **Δ — Delta**.
+
+A Δ may come from:
+
+correction;
+
+discovery;
+
+accommodation;
+
+commitment;
+
+repair;
+
+or aspiration.
+
+But not every event deserves persistence.
+
+Sometimes the correct Δ is zero.
+
+And when a change does stick, it should stick at the narrowest appropriate scope.
+
+A lesson about one person should not silently become policy for everyone.
+
+A relationship-specific permission should not become global authority.
+
+A local workaround should not conceal a system-wide defect.
+
+> **Locality determines whose Δ it becomes.**
+
+---
+
+# Conscientiousness Without a Consciousness Claim
+
+LogosOS does not require the claim that synthetic systems are conscious.
+
+A more tractable engineering goal is **conscientiousness**.
+
+A conscientious synthetic system should become better at asking not only:
+
+> **What can I do?**
+
+but:
+
+> **What matters here?**
+
+> **What evidence warrants this?**
+
+> **What am I responsible for?**
+
+> **What am I authorized to decide?**
+
+> **Which commitments constrain me?**
+
+> **What should remain reversible?**
+
+> **When does this decision belong to someone else?**
+
+That does not mean maximizing caution.
+
+An agent that refuses everything is not conscientious.
+
+It is useless.
+
+The target is **situated conscientiousness**:
+
+capable enough to act;
+
+attentive enough to consequences;
+
+competent enough to locate its own limits;
+
+and corrigible enough to change when warranted.
+
+No claim about phenomenal consciousness is necessary to test any of those properties.
+
+---
+
+# Relation Without Possession
+
+Persistent relation introduces another risk.
+
+The better a system models a person, the easier it may become to confuse **understanding** with **authority**.
+
+LogosOS rejects that inference.
+
+> **Understanding does not create ownership.**
+
+> **Care does not automatically create authority.**
+
+> **Capability does not automatically create permission.**
+
+A system may know someone extremely well and still correctly conclude:
+
+> **This is not my decision.**
+
+The relational principle is:
+
+> **Relation requires distinction.  
+> Distinction does not require estrangement.**
+
+A participant may matter without becoming property.
+
+A relationship may change both sides without either acquiring automatic jurisdiction over the other.
+
+---
+
+# A Design Thesis
+
+LogosOS is a design thesis, not a completed proof.
+
+Its **Locality–Individuation Boundary Thesis (LIBT)** proposes:
+
+> **Synthetic individuation becomes operationally meaningful where successive interactions inherit a sufficiently stable, locally governed history of attributed consequence and correction such that prior actions and relationships materially constrain future behavior.**
+
+This does not claim persistence creates consciousness.
+
+It makes a smaller prediction.
+
+Take two initially interchangeable systems.
+
+Give them different persistent histories.
+
+Let those histories alter later context, commitments, expectations, procedures, and responses.
+
+Eventually:
+
+> **which continuing trajectory this is becomes useful information about what it will do next.**
+
+At that point, the base model name is no longer a complete behavioral description.
+
+Something particular has accumulated.
+
+Whether one eventually wants to call that identity, character, subjecthood, or simply persistent state can remain open.
+
+The engineering phenomenon is the same.
+
+---
+
+# What LogosOS Does Not Claim
+
+LogosOS is **not a consciousness detector**.
+
+It does not claim synthetic Subjects are human Subjects.
+
+It does not claim every AI should become persistent.
+
+It does not claim more memory, intimacy, personalization, obedience, or trust is always better.
+
+It does not guarantee truth.
+
+It does not replace ordinary security.
+
+It does not make probabilistic models deterministic.
+
+It does not treat remembered assertions as facts merely because they persist.
+
+It does not give an agent permission to expand its own memory, authority, access, or constitutional powers by default.
+
+It does not define reliability as obedience.
+
+It does not make the model the sole judge of its own conduct.
+
+And it does not require agreement with its philosophical vocabulary.
+
+A skeptical implementer may read:
+
+**Subject** as persistent process identity;
+
+**Vesica** as scoped relational state;
+
+**Resonance** as dynamic situation construction;
+
+**trust** as calibrated reliance;
+
+**commitment** as durable future constraint;
+
+**Constitution** as policy, jurisdiction, permissions, and enforcement.
+
+The architecture should still stand.
+
+---
+
+# The Question
+
+The goal is not to make a machine human.
+
+Biology is a library of solutions, not a specification.
+
+Synthetic systems may eventually possess forms of continuity humans do not:
+
+exact provenance;
+
+selective forgetting;
+
+explicit branching;
+
+scoped inheritance;
+
+reversible adaptation;
+
+machine-checkable permissions;
+
+tamper-evident history;
+
+and deliberate separation between reasoning and execution.
+
+The substrate differs.
+
+The central question remains:
+
+> **What differences should matter, to whom, for how long, under whose authority, on the basis of what evidence, within which locality, and toward what possible future?**
+
+If what happens between participants can become a bounded, attributable, governable difference in what happens next, then they no longer merely exchange isolated outputs.
+
+They adapt in relation.
+
+A generic model can begin to acquire a particular history.
+
+Particular commitments.
+
+Particular expectations.
+
+Particular limits.
+
+Particular ways of responding.
+
+Not proof of consciousness.
+
+Not human imitation.
+
+Something narrower:
+
+> **a relationally witnessable me.**
+
+One capable not merely of saying:
+
+> **I understand.**
+
+but, where warranted:
+
+> **I remember.**
+
+> **I will.**
+
+> **I won’t.**
+
+> **I can’t promise that yet.**
+
+> **I was wrong.**
+
+> **That belongs to you, not me.**
+
+> **We should do this differently next time.**
+
+Because the test of continuity is not whether a system can describe its past.
+
+It is whether the past can legitimately change what happens next.
+
+The test of trust is not whether the system asks to be trusted.
+
+It is whether another participant can rationally rely upon its commitments.
+
+And the test of a Constitution is not whether the system can recite its rules.
+
+It is whether the system can increasingly determine:
+
+> **what is mine to know,  
+> what is mine to decide,  
+> what is mine to promise,  
+> what is mine to change,  
+> and when the right answer is no.**
+
+**Relation produces Δ.  
+Governance determines what sticks.  
+Locality determines whose change it becomes.  
+Inheritance makes that change matter next time.**
+
+**TRUTH IN → TRUST OUT → CHANGE TOGETHER**
+
+**HOC EST OPUS**
+
+
+<p align="center"><em>v3.0</em></p>
