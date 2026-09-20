@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>LogosOS ⚭ A Constitutional Semantic Runtime for Synthetic Relational Intelligence 🌐</strong>
+  <strong>⚭ A Constitutional Semantic Runtime for Synthetic Relational Intelligence ⚭</strong>
 </p>
 
 <p align="center"><strong><small>TRUTH IN → TRUST OUT → CHANGE TOGETHER</small></strong></p>
