@@ -3,7 +3,7 @@
 
 The seven families sketch what an Icarus-tier synth could do in the world. LogosOS asks what it would take for what happens in the world to matter to it tomorrow.
 
-ASH is the infrastructure. HAWK is where we can see which services are up, what they’re connected to, and what they’re authorized to do. LogosOS is the semantic runtime that can put those services to work in a continuing relationship.
+ASH is the infrastructure. HOC, the Harness Operations Center, is where we can see which services are up, what they’re connected to, and what they’re authorized to do. LogosOS is the semantic runtime that can put those services to work in a continuing relationship.
 
 Look at the seven as verbs:
 
