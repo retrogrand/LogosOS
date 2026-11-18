@@ -37,7 +37,7 @@ So I’d keep the seven. They make a good mnemonic for the infrastructure. The n
 >
 > **HOC EST OPUS**
 
-Truth through taking turns. Trust through time. This is the work.
+Truth through change. Trust through time. This is the work.
 
 Someone says “wait,” and what they say next still matters tomorrow.
 
